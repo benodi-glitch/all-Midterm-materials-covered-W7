@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>College English — Midterm Comprehensive Review</title>
+<style>
+  :root{
+    --ink:#1f2937;
+    --muted:#5f6b7a;
+    --line:#d9dee7;
+    --soft:#f7f9fc;
+    --accent:#183b5b;
+    --accent2:#eaf2f8;
+    --essay:#5b3f8c;
+    --essaybg:#f6f1fb;
+    --white:#fff;
+  }
+
+  *{box-sizing:border-box}
+
+  html{
+    background:#eef1f5;
+  }
+
+  body{
+    margin:0;
+    color:var(--ink);
+    background:#eef1f5;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.48;
+    -webkit-user-select:none;
+    user-select:none;
+  }
+
+  .page{
+    width:min(190mm, calc(100% - 28px));
+    margin:24px auto;
+    background:var(--white);
+    box-shadow:0 5px 22px rgba(0,0,0,.08);
+    padding:14mm 14mm 16mm;
+  }
+
+  header{
+    border-bottom:3px solid var(--accent);
+    padding-bottom:14px;
+    margin-bottom:18px;
+  }
+
+  h1{
+    margin:0;
+    font-size:23px;
+    line-height:1.2;
+    letter-spacing:.1px;
+  }
+
+  .subtitle{
+    margin:5px 0 0;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+  .student-info{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:10px;
+    margin:16px 0 18px;
+  }
+
+  .field label{
+    display:block;
+    font-size:11px;
+    font-weight:700;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+
+  input[type=text],
+  textarea{
+    width:100%;
+    font:inherit;
+    border:1px solid #c8d0db;
+    border-radius:5px;
+    padding:8px 9px;
+    background:#fff;
+    color:var(--ink);
+    -webkit-user-select:text;
+    user-select:text;
+  }
+
+  input[type=text]{
+    height:35px;
+  }
+
+  textarea{
+    min-height:92px;
+    resize:vertical;
+  }
+
+  input[type=text]:focus,
+  textarea:focus{
+    outline:2px solid #bdd6ea;
+    border-color:#7aa5c4;
+  }
+
+  .instructions{
+    background:var(--accent2);
+    border-left:4px solid var(--accent);
+    padding:11px 13px;
+    margin:0 0 22px;
+    font-size:13px;
+  }
+
+  .instructions strong{color:var(--accent)}
+
+  .section{
+    margin:0 0 20px;
+    border:1px solid var(--line);
+    border-radius:7px;
+    overflow:hidden;
+  }
+
+  .section-head{
+    padding:10px 12px;
+    background:var(--soft);
+    border-bottom:1px solid var(--line);
+  }
+
+  .section-head .num{
+    color:var(--accent);
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+  }
+
+  .section-head h2{
+    margin:2px 0 0;
+    font-size:17px;
+    line-height:1.25;
+  }
+
+  .section-head.essay{
+    background:var(--essaybg);
+  }
+
+  .section-head.essay .num{
+    color:var(--essay);
+  }
+
+  .q{
+    padding:12px 13px 14px;
+    border-bottom:1px solid #edf0f4;
+  }
+
+  .q:last-child{
+    border-bottom:0;
+  }
+
+  .q-title{
+    font-weight:700;
+    margin-bottom:7px;
+  }
+
+  .q-title .qn{
+    color:var(--accent);
+    margin-right:6px;
+  }
+
+  .option{
+    display:block;
+    margin:6px 0;
+    font-weight:400;
+  }
+
+  .option input{
+    margin-right:7px;
+    accent-color:var(--accent);
+  }
+
+  .short-answer{
+    margin-top:7px;
+  }
+
+  .short-answer input{
+    height:38px;
+  }
+
+  .essay-prompt{
+    margin-bottom:8px;
+  }
+
+  .small-note{
+    color:var(--muted);
+    font-size:11px;
+    margin-top:5px;
+  }
+
+  .answer-lines{
+    min-height:100px;
+  }
+
+  .footer-note{
+    margin-top:18px;
+    padding-top:10px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:11px;
+  }
+
+  @media (max-width:760px){
+    .page{
+      width:calc(100% - 16px);
+      margin:8px auto;
+      padding:18px;
+      box-shadow:none;
+    }
+    .student-info{
+      grid-template-columns:1fr;
+    }
+  }
+
+  @media print{
+    html,body{
+      background:#fff;
+    }
+
+    body{
+      font-size:10.5pt;
+    }
+
+    .page{
+      width:auto;
+      max-width:none;
+      margin:0;
+      box-shadow:none;
+      padding:0;
+    }
+
+    @page{
+      size:A4;
+      margin:14mm;
+    }
+
+    header{
+      margin-bottom:10px;
+      page-break-after:avoid;
+      break-after:avoid;
+    }
+
+    h1{
+      font-size:18pt;
+    }
+
+    .subtitle{
+      font-size:9pt;
+    }
+
+    .student-info{
+      margin:10px 0 12px;
+    }
+
+    .instructions{
+      font-size:9.5pt;
+      margin-bottom:12px;
+      page-break-inside:avoid;
+      break-inside:avoid;
+    }
+
+    .section{
+      margin-bottom:12px;
+      page-break-inside:auto;
+      break-inside:auto;
+    }
+
+    .section-head{
+      page-break-after:avoid;
+      break-after:avoid;
+      padding:7px 9px;
+    }
+
+    .section-head h2{
+      font-size:12.5pt;
+    }
+
+    .q{
+      padding:7px 9px 8px;
+      page-break-inside:avoid;
+      break-inside:avoid;
+    }
+
+    .q-title{
+      margin-bottom:4px;
+    }
+
+    input[type=text]{
+      height:28px;
+      padding:4px 6px;
+      border-radius:3px;
+    }
+
+    textarea{
+      min-height:72px;
+      padding:5px 6px;
+    }
+
+    .small-note,
+    .footer-note{
+      font-size:8.5pt;
+    }
+  }
+</style>
+</head>
+
+<body
+  oncontextmenu="return false"
+  ondragstart="return false"
+  onselectstart="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+>
+<div class="page" id="worksheet">
+<header>
+  <h1>College English — Midterm Comprehensive Review</h1>
+  <p class="subtitle">70 questions • First Impressions • Healthy Diet • Business Life</p>
+</header>
+
+<div class="student-info">
+  <div class="field">
+    <label for="studentName">Name</label>
+    <input id="studentName" type="text" autocomplete="off" spellcheck="false"
+      onpaste="return false" oncopy="return false" oncut="return false" ondrop="return false">
+  </div>
+  <div class="field">
+    <label for="studentClass">Class</label>
+    <input id="studentClass" type="text" autocomplete="off" spellcheck="false"
+      onpaste="return false" oncopy="return false" oncut="return false" ondrop="return false">
+  </div>
+  <div class="field">
+    <label for="studentDate">Date</label>
+    <input id="studentDate" type="text" autocomplete="off" spellcheck="false"
+      onpaste="return false" oncopy="return false" oncut="return false" ondrop="return false">
+  </div>
+</div>
+
+<div class="instructions">
+  <strong>Instructions:</strong> Complete all 70 questions. Choose one answer for True/False questions. Type your answer for error-correction and fill-in-the-blank questions. For the final three sections, write your own short responses. <strong>Use your own words.</strong>
+</div>
+<section class="section"><div class="section-head "><div class="num">Topic 1 • Grammar</div><h2>1. Simple Past &amp; Present Perfect</h2></div><div class="q"><div class="q-title"><span class="qn">Q1.</span>The sentence <b>“I have met the new marketing manager yesterday.”</b> is correct because Present Perfect can be used with a finished past-time expression.</div>
+              <label class="option"><input type="radio" name="q1" value="true"> True</label>
+              <label class="option"><input type="radio" name="q1" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q2.</span>The sentence <b>“Our first impression of the candidate improved after she answered the follow-up questions.”</b> uses Simple Past appropriately.</div>
+              <label class="option"><input type="radio" name="q2" value="true"> True</label>
+              <label class="option"><input type="radio" name="q2" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q3.</span>Correct the error: <b>“I have attended three networking events last month.”</b></div>
+              <div class="short-answer">
+                <input id="q3" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q4.</span>Correct the error: <b>“She has finished the report two hours ago.”</b></div>
+              <div class="short-answer">
+                <input id="q4" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q5.</span>Our team ______ (develop) a healthier lunch policy since January, and the results are encouraging.</div>
+              <div class="short-answer">
+                <input id="q5" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q6.</span>When I first ______ (meet) our supplier, I thought he was very reserved.</div>
+              <div class="short-answer">
+                <input id="q6" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q7.</span>So far this semester, the students ______ (complete) four units on professional communication.</div>
+              <div class="short-answer">
+                <input id="q7" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head "><div class="num">Topic 2 • Grammar</div><h2>2. Subjunctive</h2></div><div class="q"><div class="q-title"><span class="qn">Q8.</span>In formal English, <b>“It is essential that every employee be respectful to clients.”</b> uses the subjunctive correctly.</div>
+              <label class="option"><input type="radio" name="q8" value="true"> True</label>
+              <label class="option"><input type="radio" name="q8" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q9.</span>The sentence <b>“If I were the manager, I would change the company’s lunch policy.”</b> is acceptable for a hypothetical situation.</div>
+              <label class="option"><input type="radio" name="q9" value="true"> True</label>
+              <label class="option"><input type="radio" name="q9" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q10.</span>Correct the error: <b>“It is important that every applicant submits the form by noon.”</b></div>
+              <div class="short-answer">
+                <input id="q10" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q11.</span>Correct the error: <b>“If I was in charge of the interview process, I would shorten the waiting time.”</b></div>
+              <div class="short-answer">
+                <input id="q11" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q12.</span>The doctor recommended that he ______ (eat) more vegetables and less processed food.</div>
+              <div class="short-answer">
+                <input id="q12" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q13.</span>If our department ______ (be) better organized, we would finish the quarterly report earlier.</div>
+              <div class="short-answer">
+                <input id="q13" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q14.</span>It is vital that the marketing team ______ (not / ignore) customer feedback.</div>
+              <div class="short-answer">
+                <input id="q14" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head "><div class="num">Topic 3 • Grammar</div><h2>3. Active &amp; Passive Voice</h2></div><div class="q"><div class="q-title"><span class="qn">Q15.</span>The sentence <b>“The finance team approved the new wellness budget.”</b> is active voice.</div>
+              <label class="option"><input type="radio" name="q15" value="true"> True</label>
+              <label class="option"><input type="radio" name="q15" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q16.</span>The sentence <b>“The candidate was introduced by the HR manager”</b> focuses more on the receiver of the action than on the doer.</div>
+              <label class="option"><input type="radio" name="q16" value="true"> True</label>
+              <label class="option"><input type="radio" name="q16" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q17.</span>Correct the error: <b>“The new policy was approved the board last Friday.”</b></div>
+              <div class="short-answer">
+                <input id="q17" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q18.</span>Correct the error: <b>“The presentation prepared by Maya yesterday.”</b></div>
+              <div class="short-answer">
+                <input id="q18" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q19.</span>The healthy-meal initiative ______ (launch) by the HR department last month.</div>
+              <div class="short-answer">
+                <input id="q19" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q20.</span>More than 300 customers ______ (invite) to the company’s product demonstration.</div>
+              <div class="short-answer">
+                <input id="q20" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q21.</span>The interview panel ______ (review) every application before selecting the finalists.</div>
+              <div class="short-answer">
+                <input id="q21" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head "><div class="num">Topic 4 • Grammar</div><h2>4. Gerunds &amp; Infinitives</h2></div><div class="q"><div class="q-title"><span class="qn">Q22.</span>The sentence <b>“The manager avoided discussing salary during the first interview.”</b> uses a gerund correctly after <i>avoid</i>.</div>
+              <label class="option"><input type="radio" name="q22" value="true"> True</label>
+              <label class="option"><input type="radio" name="q22" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q23.</span>The sentence <b>“Our company decided hiring a nutrition consultant.”</b> is grammatically correct.</div>
+              <label class="option"><input type="radio" name="q23" value="true"> True</label>
+              <label class="option"><input type="radio" name="q23" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q24.</span>Correct the error: <b>“She suggested to revise the menu before the meeting.”</b></div>
+              <div class="short-answer">
+                <input id="q24" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q25.</span>Correct the error: <b>“The interns hope joining the sales team next year.”</b></div>
+              <div class="short-answer">
+                <input id="q25" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q26.</span>The company encourages employees to ______ (bring) healthy snacks to the office.</div>
+              <div class="short-answer">
+                <input id="q26" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q27.</span>He admitted ______ (forget) the client’s name during the first meeting.</div>
+              <div class="short-answer">
+                <input id="q27" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q28.</span>The HR director promised ______ (review) the flexible-work policy.</div>
+              <div class="short-answer">
+                <input id="q28" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head "><div class="num">Topic 5 • Grammar</div><h2>5. Clause Types &amp; Sentence Structure</h2></div><div class="q"><div class="q-title"><span class="qn">Q29.</span>A simple sentence can contain a compound predicate but still have only one independent clause.</div>
+              <label class="option"><input type="radio" name="q29" value="true"> True</label>
+              <label class="option"><input type="radio" name="q29" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q30.</span>A sentence containing one independent clause and one dependent clause is a compound sentence.</div>
+              <label class="option"><input type="radio" name="q30" value="true"> True</label>
+              <label class="option"><input type="radio" name="q30" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q31.</span>Correct the punctuation: <b>“The candidate was nervous, she answered every question carefully.”</b></div>
+              <div class="short-answer">
+                <input id="q31" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q32.</span>Correct the sentence fragment: <b>“Because the restaurant changed its menu.”</b></div>
+              <div class="short-answer">
+                <input id="q32" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q33.</span>Identify the sentence type: <b>“Although the interview was brief, the candidate made a strong first impression.”</b> → ______ sentence.</div>
+              <div class="short-answer">
+                <input id="q33" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q34.</span>Identify the sentence type: <b>“The chef changed the recipe, and the customers noticed the difference.”</b> → ______ sentence.</div>
+              <div class="short-answer">
+                <input id="q34" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q35.</span>Complete the sentence with a suitable subordinating conjunction: “______ the company expanded rapidly, it still kept a small-team culture.”</div>
+              <div class="short-answer">
+                <input id="q35" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head "><div class="num">Topic 6 • Grammar</div><h2>6. Countable &amp; Uncountable Nouns</h2></div><div class="q"><div class="q-title"><span class="qn">Q36.</span><b>Information</b> is normally treated as an uncountable noun in English, so we say <i>some information</i>, not <i>an information</i>.</div>
+              <label class="option"><input type="radio" name="q36" value="true"> True</label>
+              <label class="option"><input type="radio" name="q36" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q37.</span>The phrase <b>“two useful advice”</b> is correct because <i>advice</i> can be counted directly with numbers.</div>
+              <label class="option"><input type="radio" name="q37" value="true"> True</label>
+              <label class="option"><input type="radio" name="q37" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q38.</span>Correct the error: <b>“The manager gave me many useful advices.”</b></div>
+              <div class="short-answer">
+                <input id="q38" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q39.</span>Correct the error: <b>“We bought several equipment for the new kitchen.”</b></div>
+              <div class="short-answer">
+                <input id="q39" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q40.</span>The nutritionist gave the staff some useful ______ (information) about balanced meals.</div>
+              <div class="short-answer">
+                <input id="q40" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q41.</span>We need three ______ of feedback before redesigning the website.</div>
+              <div class="short-answer">
+                <input id="q41" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q42.</span>The company has made ______ progress since the new training program began.</div>
+              <div class="short-answer">
+                <input id="q42" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head "><div class="num">Topic 7 • Grammar</div><h2>7. Adjective Order (OSASCOMP) &amp; Quantifiers</h2></div><div class="q"><div class="q-title"><span class="qn">Q43.</span>In the phrase <b>“a beautiful small modern office”</b>, the adjective order is consistent with the usual OSASCOMP pattern.</div>
+              <label class="option"><input type="radio" name="q43" value="true"> True</label>
+              <label class="option"><input type="radio" name="q43" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q44.</span>The phrase <b>“much healthy vegetables”</b> is correct because <i>vegetables</i> is an uncountable noun.</div>
+              <label class="option"><input type="radio" name="q44" value="true"> True</label>
+              <label class="option"><input type="radio" name="q44" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q45.</span>Correct the adjective order: <b>“a leather black stylish business bag”</b></div>
+              <div class="short-answer">
+                <input id="q45" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q46.</span>Correct the quantifier: <b>“There are much fresh fruit options in the cafeteria.”</b></div>
+              <div class="short-answer">
+                <input id="q46" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q47.</span>The company bought a ______, ______, ______ conference table. (large / modern / wooden)</div>
+              <div class="short-answer">
+                <input id="q47" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q48.</span>Only ______ employees chose the vegetarian lunch option, but they asked for it again next week. (a few / much)</div>
+              <div class="short-answer">
+                <input id="q48" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q49.</span>We do not have ______ time to prepare another presentation before the client arrives. (many / much)</div>
+              <div class="short-answer">
+                <input id="q49" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div></section><section class="section"><div class="section-head essay"><div class="num">Topic 8 • Essay</div><h2>8. Descriptive Essay</h2></div><div class="q"><div class="q-title"><span class="qn">Q50.</span>A descriptive essay primarily aims to help the reader picture a person, place, object, or experience through specific details.</div>
+              <label class="option"><input type="radio" name="q50" value="true"> True</label>
+              <label class="option"><input type="radio" name="q50" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q51.</span>A descriptive essay should avoid concrete details because general statements are more objective and easier to understand.</div>
+              <label class="option"><input type="radio" name="q51" value="true"> True</label>
+              <label class="option"><input type="radio" name="q51" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q52.</span>Improve this vague sentence for a descriptive essay: <b>“The office was nice and the food was good.”</b></div>
+              <div class="short-answer">
+                <input id="q52" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q53.</span>Revise this weak topic sentence so it introduces a clearer descriptive focus: <b>“I will describe a business meeting.”</b></div>
+              <div class="short-answer">
+                <input id="q53" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q54.</span>Write 2–3 sentences describing a classmate making a <b>first impression</b>. Use at least two specific or sensory details.</div>
+              <textarea id="q54" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q55.</span>Write a possible thesis/topic sentence for a descriptive essay about <b>a healthy cafeteria</b>.</div>
+              <textarea id="q55" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q56.</span>Describe a <b>business office</b> in 3–4 sentences. Include at least one visual detail, one sound/smell detail, and one detail about atmosphere.</div>
+              <textarea id="q56" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div></section><section class="section"><div class="section-head essay"><div class="num">Topic 9 • Essay</div><h2>9. Analytical Essay</h2></div><div class="q"><div class="q-title"><span class="qn">Q57.</span>An analytical essay should make a claim and support that claim by examining evidence, patterns, reasons, or relationships.</div>
+              <label class="option"><input type="radio" name="q57" value="true"> True</label>
+              <label class="option"><input type="radio" name="q57" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q58.</span>An analytical paragraph is complete as long as it contains a topic sentence and an example, even if it never explains the example.</div>
+              <label class="option"><input type="radio" name="q58" value="true"> True</label>
+              <label class="option"><input type="radio" name="q58" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q59.</span>Improve the weak thesis: <b>“This essay is about why first impressions are important.”</b></div>
+              <div class="short-answer">
+                <input id="q59" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q60.</span>Revise the weak analytical statement: <b>“Healthy food is good for workers.”</b></div>
+              <div class="short-answer">
+                <input id="q60" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q61.</span>Write a possible analytical thesis about <b>how first impressions influence professional interactions</b>.</div>
+              <textarea id="q61" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q62.</span>Give one piece of evidence you could use to support the claim that <b>healthy eating can influence workplace productivity</b>, and explain in 1–2 sentences how the evidence supports the claim.</div>
+              <textarea id="q62" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q63.</span>Write a 3–4 sentence analytical paragraph explaining <b>why a company’s food policy might affect employee satisfaction</b>.</div>
+              <textarea id="q63" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div></section><section class="section"><div class="section-head essay"><div class="num">Topic 10 • Essay</div><h2>10. Cause-and-Effect Essay</h2></div><div class="q"><div class="q-title"><span class="qn">Q64.</span>A cause-and-effect essay can explain why something happens, what happens as a result, or both.</div>
+              <label class="option"><input type="radio" name="q64" value="true"> True</label>
+              <label class="option"><input type="radio" name="q64" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q65.</span>In a cause-and-effect essay, every event must have only one cause and one effect.</div>
+              <label class="option"><input type="radio" name="q65" value="true"> True</label>
+              <label class="option"><input type="radio" name="q65" value="false"> False</label>
+            </div><div class="q"><div class="q-title"><span class="qn">Q66.</span>Improve the weak thesis: <b>“First impressions and jobs.”</b></div>
+              <div class="short-answer">
+                <input id="q66" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q67.</span>Improve this unclear cause/effect sentence: <b>“People eat badly, so business is unhealthy.”</b></div>
+              <div class="short-answer">
+                <input id="q67" type="text" autocomplete="off" spellcheck="false"
+                  onpaste="return false" oncopy="return false" oncut="return false"
+                  ondrop="return false">
+              </div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q68.</span>Write a possible cause-and-effect thesis about <b>poor first impressions in job interviews</b>.</div>
+              <textarea id="q68" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q69.</span>Write 2–3 sentences explaining one cause and one effect of <b>unhealthy eating habits among university students</b>.</div>
+              <textarea id="q69" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div><div class="q"><div class="q-title"><span class="qn">Q70.</span>Write a short cause-and-effect paragraph (4–5 sentences) about <b>why employees may become less productive when workplace wellness is ignored</b>.</div>
+              <textarea id="q70" class="answer-lines" spellcheck="false"
+                onpaste="return false" oncopy="return false" oncut="return false"
+                ondrop="return false"></textarea>
+              <div class="small-note">Write in complete sentences and keep your response focused.</div>
+            </div></section>
+<div class="footer-note">
+Write clearly and check your answers before submitting. Your instructor will review the open-ended responses.
+</div>
+</div>
+
+<script>
+/* Classroom anti-copy/anti-drag friction. This cannot prevent browser developer tools,
+   screenshots, or other workarounds, but it blocks normal copy/paste/cut/drag actions. */
+(function(){
+  const blockedKeys = new Set(["c","x","v","a","u","s","p"]);
+  document.addEventListener("keydown", function(e){
+    const key = (e.key || "").toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && blockedKeys.has(key)) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (e.shiftKey && (key === "insert")) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, true);
+
+  ["copy","cut","paste","dragstart","drop","contextmenu","selectstart"].forEach(function(evt){
+    document.addEventListener(evt, function(e){
+      if (evt === "selectstart") {
+        const tag = (e.target && e.target.tagName) || "";
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+      }
+      e.preventDefault();
+      e.stopPropagation();
+    }, true);
+  });
+
+  document.querySelectorAll("input, textarea").forEach(function(el){
+    el.addEventListener("paste", e => e.preventDefault());
+    el.addEventListener("copy", e => e.preventDefault());
+    el.addEventListener("cut", e => e.preventDefault());
+    el.addEventListener("drop", e => e.preventDefault());
+  });
+})();
+</script>
+</body>
+</html>
